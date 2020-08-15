@@ -1,26 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import ItemList from "./components/ItemList";
+import CalendarView from "./components/CalendarView";
+import AddItem from "./components/AddItem";
+import Muuri from "muuri";
 
-function App() {
+//muuri
+
+//muuri
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div className="container-fluid drag-container">
+        <div className="row align-items-center">
+          <div className="col-2">
+            <AddItem />
+            <ItemList />
+          </div>
+          <div className="col-10">
+            <CalendarView />
+          </div>
+        </div>
+      </div>
     </div>
   );
-}
+};
 
 export default App;
