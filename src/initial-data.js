@@ -8,7 +8,7 @@ const initialData = {
     "calendar-1": {
       id: "calendar-1",
       title: "Day 1",
-      taskIds: ["item-1", "item-2", "item-3"],
+      taskIds: ["item-1", "item-2"],
     },
     "calendar-2": {
       id: "calendar-2",
