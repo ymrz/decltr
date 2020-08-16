@@ -81,17 +81,18 @@ class App extends React.Component {
     return (
       <div className="container">
         <p
-          className="display-1 font-weight-bold"
+          className="display-3 font-weight-bold"
           style={{ fontFamily: "Righteous" }}
         >
           decltr.
         </p>
+
         <div className="row">
           <div className="col-2">
-            <DragDropContext onDragEnd={this.onDragEnd}></DragDropContext>
+            <LeftColumn />
           </div>
 
-          <div className="col">
+          <div className="col-10">
             <div className="row">
               <DragDropContext onDragEnd={this.onDragEnd}>
                 {this.state.columnOrder.map((columnId) => {
@@ -107,6 +108,7 @@ class App extends React.Component {
                 })}
               </DragDropContext>
             </div>
+            <div className="row justify-content-end mt-1"></div>
           </div>
         </div>
       </div>

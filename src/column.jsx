@@ -5,8 +5,10 @@ import Task from "./task";
 export default class Column extends React.Component {
   render() {
     return (
-      <div className="col-2 card" style={{ height: "100px" }}>
-        <p className="font-weight-light">{this.props.column.title}</p>
+      <div className="col-2 card mr-1 mb-1" style={{ height: "100px" }}>
+        <p className="font-weight-light text-muted">
+          {this.props.column.title}
+        </p>
         <Droppable droppableId={this.props.column.id}>
           {(provided) => (
             <div ref={provided.innerRef} {...provided.droppableProps}>
