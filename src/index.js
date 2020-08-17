@@ -3,12 +3,20 @@ import ReactDOM from "react-dom";
 import initialData from "./initial-data";
 import Column from "./column";
 import LeftColumn from "./leftColumn";
+import List from "./List";
 
 //dnd
 import { DragDropContext } from "react-beautiful-dnd";
 
 class App extends React.Component {
   state = initialData;
+  items = [];
+
+  addItem(val) {
+    const item = { name: val, id: window.id++ };
+    this.state.items.push(item);
+    this.setState({ items: this.state.items });
+  }
 
   onDragEnd = (result) => {
     const { destination, source, draggableId } = result;
@@ -88,8 +96,8 @@ class App extends React.Component {
         </p>
 
         <div className="row">
-          <div className="col-2">
-            <LeftColumn />
+          <div className="col-2 justify-content-center">
+            <List />
           </div>
 
           <div className="col-10">
@@ -110,6 +118,9 @@ class App extends React.Component {
             </div>
             <div className="row justify-content-end mt-1"></div>
           </div>
+        </div>
+        <div className="row">
+          <button className="btn btn-outline-dark">Complete</button>
         </div>
       </div>
     );

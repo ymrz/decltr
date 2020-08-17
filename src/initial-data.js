@@ -1,8 +1,11 @@
 const initialData = {
   tasks: {
-    "item-1": { id: "item-1", content: "book" },
-    "item-2": { id: "item-2", content: "old shoes" },
-    "item-3": { id: "item-3", content: "wedding dress" },
+    "item-1": { id: "item-1", content: "cookie" },
+    "item-2": { id: "item-2", content: "bear claw" },
+    "item-3": { id: "item-3", content: "brownie" },
+    "item-4": { id: "item-4", content: "Tart" },
+    "item-5": { id: "item-5", content: "Jelly-o" },
+    "item-6": { id: "item-6", content: "Cheesecake" },
   },
   columns: {
     "calendar-1": {
@@ -13,7 +16,7 @@ const initialData = {
     "calendar-2": {
       id: "calendar-2",
       title: " Day 2",
-      taskIds: [],
+      taskIds: ["item-3", "item-4"],
     },
     "calendar-3": {
       id: "calendar-3",
@@ -33,7 +36,7 @@ const initialData = {
     "calendar-6": {
       id: "calendar-6",
       title: " Day 6",
-      taskIds: [],
+      taskIds: ["item-5", "item-6"],
     },
     "calendar-7": {
       id: "calendar-7",
